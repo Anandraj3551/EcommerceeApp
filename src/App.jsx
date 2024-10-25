@@ -1,8 +1,8 @@
-import { Routes, Route, Navigate } from "react-router-dom"; // Import Navigate
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Collection from "./pages/Collection";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Contect from "./pages/Contact";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
@@ -13,20 +13,20 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="px-0 w-full overflow-x-hidden">
+    <div className=" px-0 w-full overflow-x-hidden ">
+      {/* px-0 w-full overflow-x-hidden */}
+      {/* px-0 w-full lg:px-[2vw] md:px-[2vw] sm:px-[2vw] overflow-x-hidden*/}
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} /> {/* Fixed typo */}
+        <Route path="/contact" element={<Contect />} />
         <Route path="/product/:productId" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/place-order" element={<PlaceOrder />} />
-        <Route path="/orders" element={<Orders />} />{" "}
-        {/* Changed to lowercase */}
-        <Route path="*" element={<Navigate to="/" />} /> {/* Catch-all route */}
+        <Route path="/Orders" element={<Orders />} />
       </Routes>
       <Footer />
     </div>
