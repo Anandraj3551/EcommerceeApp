@@ -18,7 +18,7 @@ const App = () => {
       {/* px-0 w-full lg:px-[2vw] md:px-[2vw] sm:px-[2vw] overflow-x-hidden*/}
       <Navbar />
       <Routes>
-        <Route path="/EcommerceClothingApp/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contect />} />
